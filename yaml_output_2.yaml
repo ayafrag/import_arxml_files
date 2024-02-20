@@ -1,0 +1,438 @@
+AUTOSAR:
+  '@xmlns': http://autosar.org/schema/r4.0
+  '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  '@xsi:schemaLocation': http://autosar.org/schema/r4.0 autosar_4-0-3.xsd
+  AR-PACKAGES:
+    AR-PACKAGE:
+    - '@UUID': 4a00aebd-b733-41c0-92a5-c433e30f1104
+      AR-PACKAGES:
+        AR-PACKAGE:
+          AR-PACKAGES:
+            AR-PACKAGE:
+            - CATEGORY: BLUEPRINT
+              ELEMENTS:
+                SW-BASE-TYPE:
+                - BASE-TYPE-ENCODING: BOOLEAN
+                  BASE-TYPE-SIZE: '8'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': boolean
+                      '@L': EN
+                  NATIVE-DECLARATION: boolean
+                  SHORT-NAME: boolean
+                - BASE-TYPE-ENCODING: NONE
+                  BASE-TYPE-SIZE: '8'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint8
+                      '@L': EN
+                  NATIVE-DECLARATION: uint8
+                  SHORT-NAME: uint8
+                - BASE-TYPE-ENCODING: NONE
+                  BASE-TYPE-SIZE: '16'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint16
+                      '@L': EN
+                  NATIVE-DECLARATION: uint16
+                  SHORT-NAME: uint16
+                - BASE-TYPE-ENCODING: NONE
+                  BASE-TYPE-SIZE: '32'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint32
+                      '@L': EN
+                  NATIVE-DECLARATION: uint32
+                  SHORT-NAME: uint32
+                - BASE-TYPE-ENCODING: 2C
+                  BASE-TYPE-SIZE: '8'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint8
+                      '@L': EN
+                  NATIVE-DECLARATION: sint8
+                  SHORT-NAME: sint8
+                - BASE-TYPE-ENCODING: 2C
+                  BASE-TYPE-SIZE: '16'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint16
+                      '@L': EN
+                  NATIVE-DECLARATION: sint16
+                  SHORT-NAME: sint16
+                - BASE-TYPE-ENCODING: 2C
+                  BASE-TYPE-SIZE: '32'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint32
+                      '@L': EN
+                  NATIVE-DECLARATION: sint32
+                  SHORT-NAME: sint32
+                - BASE-TYPE-ENCODING: IEEE754
+                  BASE-TYPE-SIZE: '32'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': float32
+                      '@L': EN
+                  NATIVE-DECLARATION: float
+                  SHORT-NAME: float32
+                - BASE-TYPE-ENCODING: IEEE754
+                  BASE-TYPE-SIZE: '64'
+                  CATEGORY: FIXED_LENGTH
+                  LONG-NAME:
+                    L-4:
+                      '#text': float64
+                      '@L': EN
+                  NATIVE-DECLARATION: double
+                  SHORT-NAME: float64
+                - BASE-TYPE-ENCODING: VOID
+                  LONG-NAME:
+                    L-4:
+                      '#text': void
+                      '@L': EN
+                  NATIVE-DECLARATION: void
+                  SHORT-NAME: void
+              SHORT-NAME: BaseTypes
+            - CATEGORY: BLUEPRINT
+              ELEMENTS:
+                IMPLEMENTATION-DATA-TYPE:
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': boolean
+                      '@L': EN
+                  SHORT-NAME: boolean
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/boolean
+                          '@DEST': SW-BASE-TYPE
+                        COMPU-METHOD-REF:
+                          '#text': /ArcCore/Platform/CompuMethods/boolean
+                          '@DEST': COMPU-METHOD
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint8
+                      '@L': EN
+                  SHORT-NAME: uint8
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/uint8
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint16
+                      '@L': EN
+                  SHORT-NAME: uint16
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/uint16
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint32
+                      '@L': EN
+                  SHORT-NAME: uint32
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/uint32
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint8
+                      '@L': EN
+                  SHORT-NAME: sint8
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/sint8
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint16
+                      '@L': EN
+                  SHORT-NAME: sint16
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/sint16
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint32
+                      '@L': EN
+                  SHORT-NAME: sint32
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/sint32
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': float32
+                      '@L': EN
+                  SHORT-NAME: float32
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/float32
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': float64
+                      '@L': EN
+                  SHORT-NAME: float64
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/float64
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: DATA_REFERENCE
+                  SHORT-NAME: ConstVoidPtr
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        SW-POINTER-TARGET-PROPS:
+                          SW-DATA-DEF-PROPS:
+                            SW-DATA-DEF-PROPS-VARIANTS:
+                              SW-DATA-DEF-PROPS-CONDITIONAL:
+                                BASE-TYPE-REF:
+                                  '#text': /ArcCore/Platform/BaseTypes/void
+                                  '@DEST': SW-BASE-TYPE
+                                SW-IMPL-POLICY: CONST
+                          TARGET-CATEGORY: VALUE
+                - CATEGORY: DATA_REFERENCE
+                  SHORT-NAME: VoidPtr
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        SW-POINTER-TARGET-PROPS:
+                          SW-DATA-DEF-PROPS:
+                            SW-DATA-DEF-PROPS-VARIANTS:
+                              SW-DATA-DEF-PROPS-CONDITIONAL:
+                                BASE-TYPE-REF:
+                                  '#text': /ArcCore/Platform/BaseTypes/void
+                                  '@DEST': SW-BASE-TYPE
+                          TARGET-CATEGORY: VALUE
+              SHORT-NAME: ImplementationDataTypes
+            - CATEGORY: BLUEPRINT
+              ELEMENTS:
+                COMPU-METHOD:
+                  CATEGORY: TEXTTABLE
+                  COMPU-INTERNAL-TO-PHYS:
+                    COMPU-SCALES:
+                      COMPU-SCALE:
+                      - COMPU-CONST:
+                          VT: 'FALSE'
+                        LOWER-LIMIT:
+                          '#text': '0'
+                          '@INTERVAL-TYPE': CLOSED
+                        UPPER-LIMIT:
+                          '#text': '0'
+                          '@INTERVAL-TYPE': CLOSED
+                      - COMPU-CONST:
+                          VT: 'TRUE'
+                        LOWER-LIMIT:
+                          '#text': '1'
+                          '@INTERVAL-TYPE': CLOSED
+                        UPPER-LIMIT:
+                          '#text': '1'
+                          '@INTERVAL-TYPE': CLOSED
+                  SHORT-NAME: boolean
+              SHORT-NAME: CompuMethods
+          SHORT-NAME: Platform
+      SHORT-NAME: ArcCore
+    - AR-PACKAGES:
+        AR-PACKAGE:
+          AR-PACKAGES:
+            AR-PACKAGE:
+              CATEGORY: BLUEPRINT
+              ELEMENTS:
+                IMPLEMENTATION-DATA-TYPE:
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': boolean
+                      '@L': EN
+                  SHORT-NAME: boolean
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/boolean
+                          '@DEST': SW-BASE-TYPE
+                        COMPU-METHOD-REF:
+                          '#text': /ArcCore/Platform/CompuMethods/boolean
+                          '@DEST': COMPU-METHOD
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint8
+                      '@L': EN
+                  SHORT-NAME: uint8
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/uint8
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint16
+                      '@L': EN
+                  SHORT-NAME: uint16
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/uint16
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': uint32
+                      '@L': EN
+                  SHORT-NAME: uint32
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/uint32
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint8
+                      '@L': EN
+                  SHORT-NAME: sint8
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/sint8
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint16
+                      '@L': EN
+                  SHORT-NAME: sint16
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/sint16
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': sint32
+                      '@L': EN
+                  SHORT-NAME: sint32
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/sint32
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': float32
+                      '@L': EN
+                  SHORT-NAME: float32
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/float32
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: VALUE
+                  LONG-NAME:
+                    L-4:
+                      '#text': float64
+                      '@L': EN
+                  SHORT-NAME: float64
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        BASE-TYPE-REF:
+                          '#text': /ArcCore/Platform/BaseTypes/float64
+                          '@DEST': SW-BASE-TYPE
+                  TYPE-EMITTER: Platform_Types.h
+                - CATEGORY: DATA_REFERENCE
+                  SHORT-NAME: ConstVoidPtr
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        SW-POINTER-TARGET-PROPS:
+                          SW-DATA-DEF-PROPS:
+                            SW-DATA-DEF-PROPS-VARIANTS:
+                              SW-DATA-DEF-PROPS-CONDITIONAL:
+                                BASE-TYPE-REF:
+                                  '#text': /ArcCore/Platform/BaseTypes/void
+                                  '@DEST': SW-BASE-TYPE
+                                SW-IMPL-POLICY: CONST
+                          TARGET-CATEGORY: VALUE
+                - CATEGORY: DATA_REFERENCE
+                  SHORT-NAME: VoidPtr
+                  SW-DATA-DEF-PROPS:
+                    SW-DATA-DEF-PROPS-VARIANTS:
+                      SW-DATA-DEF-PROPS-CONDITIONAL:
+                        SW-POINTER-TARGET-PROPS:
+                          SW-DATA-DEF-PROPS:
+                            SW-DATA-DEF-PROPS-VARIANTS:
+                              SW-DATA-DEF-PROPS-CONDITIONAL:
+                                BASE-TYPE-REF:
+                                  '#text': /ArcCore/Platform/BaseTypes/void
+                                  '@DEST': SW-BASE-TYPE
+                          TARGET-CATEGORY: VALUE
+              SHORT-NAME: ImplementationDataTypes
+          SHORT-NAME: Platform
+      SHORT-NAME: AUTOSAR
