@@ -1,0 +1,708 @@
+{
+    "AUTOSAR": {
+        "@xmlns": "http://autosar.org/schema/r4.0",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:schemaLocation": "http://autosar.org/schema/r4.0 autosar_4-0-3.xsd",
+        "AR-PACKAGES": {
+            "AR-PACKAGE": [
+                {
+                    "@UUID": "4a00aebd-b733-41c0-92a5-c433e30f1104",
+                    "SHORT-NAME": "ArcCore",
+                    "AR-PACKAGES": {
+                        "AR-PACKAGE": {
+                            "SHORT-NAME": "Platform",
+                            "AR-PACKAGES": {
+                                "AR-PACKAGE": [
+                                    {
+                                        "SHORT-NAME": "BaseTypes",
+                                        "CATEGORY": "BLUEPRINT",
+                                        "ELEMENTS": {
+                                            "SW-BASE-TYPE": [
+                                                {
+                                                    "SHORT-NAME": "boolean",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "boolean"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "8",
+                                                    "BASE-TYPE-ENCODING": "BOOLEAN",
+                                                    "NATIVE-DECLARATION": "boolean"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "uint8",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "uint8"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "8",
+                                                    "BASE-TYPE-ENCODING": "NONE",
+                                                    "NATIVE-DECLARATION": "uint8"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "uint16",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "uint16"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "16",
+                                                    "BASE-TYPE-ENCODING": "NONE",
+                                                    "NATIVE-DECLARATION": "uint16"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "uint32",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "uint32"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "32",
+                                                    "BASE-TYPE-ENCODING": "NONE",
+                                                    "NATIVE-DECLARATION": "uint32"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "sint8",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "sint8"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "8",
+                                                    "BASE-TYPE-ENCODING": "2C",
+                                                    "NATIVE-DECLARATION": "sint8"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "sint16",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "sint16"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "16",
+                                                    "BASE-TYPE-ENCODING": "2C",
+                                                    "NATIVE-DECLARATION": "sint16"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "sint32",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "sint32"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "32",
+                                                    "BASE-TYPE-ENCODING": "2C",
+                                                    "NATIVE-DECLARATION": "sint32"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "float32",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "float32"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "32",
+                                                    "BASE-TYPE-ENCODING": "IEEE754",
+                                                    "NATIVE-DECLARATION": "float"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "float64",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "float64"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "FIXED_LENGTH",
+                                                    "BASE-TYPE-SIZE": "64",
+                                                    "BASE-TYPE-ENCODING": "IEEE754",
+                                                    "NATIVE-DECLARATION": "double"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "void",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "void"
+                                                        }
+                                                    },
+                                                    "BASE-TYPE-ENCODING": "VOID",
+                                                    "NATIVE-DECLARATION": "void"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "SHORT-NAME": "ImplementationDataTypes",
+                                        "CATEGORY": "BLUEPRINT",
+                                        "ELEMENTS": {
+                                            "IMPLEMENTATION-DATA-TYPE": [
+                                                {
+                                                    "SHORT-NAME": "boolean",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "boolean"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/boolean"
+                                                                },
+                                                                "COMPU-METHOD-REF": {
+                                                                    "@DEST": "COMPU-METHOD",
+                                                                    "#text": "/ArcCore/Platform/CompuMethods/boolean"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "uint8",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "uint8"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/uint8"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "uint16",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "uint16"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/uint16"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "uint32",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "uint32"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/uint32"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "sint8",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "sint8"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/sint8"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "sint16",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "sint16"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/sint16"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "sint32",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "sint32"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/sint32"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "float32",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "float32"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/float32"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "float64",
+                                                    "LONG-NAME": {
+                                                        "L-4": {
+                                                            "@L": "EN",
+                                                            "#text": "float64"
+                                                        }
+                                                    },
+                                                    "CATEGORY": "VALUE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "BASE-TYPE-REF": {
+                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                    "#text": "/ArcCore/Platform/BaseTypes/float64"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "TYPE-EMITTER": "Platform_Types.h"
+                                                },
+                                                {
+                                                    "SHORT-NAME": "ConstVoidPtr",
+                                                    "CATEGORY": "DATA_REFERENCE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "SW-POINTER-TARGET-PROPS": {
+                                                                    "TARGET-CATEGORY": "VALUE",
+                                                                    "SW-DATA-DEF-PROPS": {
+                                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                                "BASE-TYPE-REF": {
+                                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                                    "#text": "/ArcCore/Platform/BaseTypes/void"
+                                                                                },
+                                                                                "SW-IMPL-POLICY": "CONST"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "SHORT-NAME": "VoidPtr",
+                                                    "CATEGORY": "DATA_REFERENCE",
+                                                    "SW-DATA-DEF-PROPS": {
+                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                "SW-POINTER-TARGET-PROPS": {
+                                                                    "TARGET-CATEGORY": "VALUE",
+                                                                    "SW-DATA-DEF-PROPS": {
+                                                                        "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                                            "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                                "BASE-TYPE-REF": {
+                                                                                    "@DEST": "SW-BASE-TYPE",
+                                                                                    "#text": "/ArcCore/Platform/BaseTypes/void"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "SHORT-NAME": "CompuMethods",
+                                        "CATEGORY": "BLUEPRINT",
+                                        "ELEMENTS": {
+                                            "COMPU-METHOD": {
+                                                "SHORT-NAME": "boolean",
+                                                "CATEGORY": "TEXTTABLE",
+                                                "COMPU-INTERNAL-TO-PHYS": {
+                                                    "COMPU-SCALES": {
+                                                        "COMPU-SCALE": [
+                                                            {
+                                                                "LOWER-LIMIT": {
+                                                                    "@INTERVAL-TYPE": "CLOSED",
+                                                                    "#text": "0"
+                                                                },
+                                                                "UPPER-LIMIT": {
+                                                                    "@INTERVAL-TYPE": "CLOSED",
+                                                                    "#text": "0"
+                                                                },
+                                                                "COMPU-CONST": {
+                                                                    "VT": "FALSE"
+                                                                }
+                                                            },
+                                                            {
+                                                                "LOWER-LIMIT": {
+                                                                    "@INTERVAL-TYPE": "CLOSED",
+                                                                    "#text": "1"
+                                                                },
+                                                                "UPPER-LIMIT": {
+                                                                    "@INTERVAL-TYPE": "CLOSED",
+                                                                    "#text": "1"
+                                                                },
+                                                                "COMPU-CONST": {
+                                                                    "VT": "TRUE"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "SHORT-NAME": "AUTOSAR",
+                    "AR-PACKAGES": {
+                        "AR-PACKAGE": {
+                            "SHORT-NAME": "Platform",
+                            "AR-PACKAGES": {
+                                "AR-PACKAGE": {
+                                    "SHORT-NAME": "ImplementationDataTypes",
+                                    "CATEGORY": "BLUEPRINT",
+                                    "ELEMENTS": {
+                                        "IMPLEMENTATION-DATA-TYPE": [
+                                            {
+                                                "SHORT-NAME": "boolean",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "boolean"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/boolean"
+                                                            },
+                                                            "COMPU-METHOD-REF": {
+                                                                "@DEST": "COMPU-METHOD",
+                                                                "#text": "/ArcCore/Platform/CompuMethods/boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "uint8",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "uint8"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/uint8"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "uint16",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "uint16"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/uint16"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "uint32",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "uint32"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/uint32"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "sint8",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "sint8"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/sint8"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "sint16",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "sint16"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/sint16"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "sint32",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "sint32"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/sint32"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "float32",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "float32"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/float32"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "float64",
+                                                "LONG-NAME": {
+                                                    "L-4": {
+                                                        "@L": "EN",
+                                                        "#text": "float64"
+                                                    }
+                                                },
+                                                "CATEGORY": "VALUE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "BASE-TYPE-REF": {
+                                                                "@DEST": "SW-BASE-TYPE",
+                                                                "#text": "/ArcCore/Platform/BaseTypes/float64"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "TYPE-EMITTER": "Platform_Types.h"
+                                            },
+                                            {
+                                                "SHORT-NAME": "ConstVoidPtr",
+                                                "CATEGORY": "DATA_REFERENCE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "SW-POINTER-TARGET-PROPS": {
+                                                                "TARGET-CATEGORY": "VALUE",
+                                                                "SW-DATA-DEF-PROPS": {
+                                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                            "BASE-TYPE-REF": {
+                                                                                "@DEST": "SW-BASE-TYPE",
+                                                                                "#text": "/ArcCore/Platform/BaseTypes/void"
+                                                                            },
+                                                                            "SW-IMPL-POLICY": "CONST"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "SHORT-NAME": "VoidPtr",
+                                                "CATEGORY": "DATA_REFERENCE",
+                                                "SW-DATA-DEF-PROPS": {
+                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                            "SW-POINTER-TARGET-PROPS": {
+                                                                "TARGET-CATEGORY": "VALUE",
+                                                                "SW-DATA-DEF-PROPS": {
+                                                                    "SW-DATA-DEF-PROPS-VARIANTS": {
+                                                                        "SW-DATA-DEF-PROPS-CONDITIONAL": {
+                                                                            "BASE-TYPE-REF": {
+                                                                                "@DEST": "SW-BASE-TYPE",
+                                                                                "#text": "/ArcCore/Platform/BaseTypes/void"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
