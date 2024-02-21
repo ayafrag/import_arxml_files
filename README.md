@@ -40,10 +40,12 @@ class import_configuration_tool:
             
             
 def main():
+
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
      parser.add_argument("json_path", type=str, help="The path to the json file")
      parser.add_argument("yaml_path", type=str, help="The path to the yaml file")
+     
      args=parser.parse_args()
      my_tool = import_configuration_tool()
      my_dict = my_tool.extract_arxml_data_to_dict(args.arxml_path)
