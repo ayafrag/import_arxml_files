@@ -11,27 +11,33 @@ import argparse
 class import_configuration_tool:
     def _init_(self):
             pass
+            
     def __json_write(self,json_path,data):
          with open(json_path,'w', encoding='utf8') as fb:
             json_data= json.dumps(data, indent=4, ensure_ascii=False)
             fb.write(json_data)
+            
     def __json_read(self,json_data):
         with open (json_data ,'r') as json_f:
                 file_data=json.load(json_f)
-        return file_data              
+        return file_data          
+        
     def __yaml_write(self,yaml_path,data):
         with open(yaml_path,'w') as yf:
-            yaml.dump(data, yf,default_flow_style=False)                 
+            yaml.dump(data, yf,default_flow_style=False)
+            
     def extract_arxml_data_to_dict(self,arxml_path):
         xml_content = open(arxml_path).read()
         my_ordered_dict=xmltodict.parse(xml_content)
         return my_ordered_dict
+        
     def convert_dict_to_json(self,json_path,data):
          self.__json_write(json_path,data)
          
     def convert_json_to_syml(self,json_data,yaml_path):
             file_data=self.__json_read(json_data)
             self.__yaml_write(yaml_path,file_data)
+            
 def main():
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
