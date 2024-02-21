@@ -63,7 +63,7 @@ if __name__ == "__main__":
 ### 2- Open_Closed Principle : Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 ### made my code open to be extended and closed for modification by writing every Method doing different reposability alone using 
 
-from abc import ABC, abstractmethod
+ from abc import ABC, abstractmethod
 
 class class_name(ABC):
     @abstractmethod
@@ -79,82 +79,3 @@ class class_name(ABC):
 ### • High-level modules should not depend on low-level modules. Both should depend on abstractions.
 ### • Abstractions should not depend on details; details should depend on abstractions.
 ### • Encourages the use of dependency injection and inversion of control to reduce direct dependencies between modules and promote modular and testable code.
-### finaly we got this 
-
-
-import xmltodict
-import json
-import yaml
-import argparse
-from abc import ABC, abstractmethod
-
-
-class json_write(ABC):
-    @abstractmethod
-    def write_json_file(self,json_path,data):
-        pass
-        
-class json_read(ABC):
-    @abstractmethod
-    def read_json_file(self,json_data):
-        pass
-        
-class yaml_write(ABC):
-    @abstractmethod
-    def write_yaml_file(self,yaml_path,data):
-        pass
-
-class Parsing_Arxml_files:
-    def extract_arxml_data_to_dict(self,arxml_path):
-        xml_content = open(arxml_path).read()
-        my_ordered_dict=xmltodict.parse(xml_content)
-        return my_ordered_dict
-    
-class get_json_file(json_write):
-     def write_json_file(self,json_path,data):
-         with open(json_path,'w', encoding='utf8') as fb:
-            json_data= json.dumps(data, indent=4, ensure_ascii=False)
-            fb.write(json_data)
-
-class get_yaml(json_read,yaml_write):
-    def read_json_file(self,json_data):
-        with open (json_data ,'r') as json_f:
-                file_data=json.load(json_f)
-        return file_data
-        
-    def write_yaml_file(self ,yaml_path,data):
-        with open(yaml_path,'w') as yf:
-            yaml.dump(data, yf,default_flow_style=False)
-
-    def yaml_output(self,json_data,yaml_path):
-         file_data=self.read_json_file(json_data)
-         self.write_yaml_file(yaml_path,file_data)
-          
-         
-def main():
-
-     parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
-     parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
-     parser.add_argument("json_path", type=str, help="The path to the json file")
-     parser.add_argument("yaml_path", type=str, help="The path to the yaml file")
-
-     args=parser.parse_args()
-     
-     arxml_file=Parsing_Arxml_files()
-     json_file =get_json_file()
-     yaml_file =get_yaml()
-
-     my_arxml_file=arxml_file.extract_arxml_data_to_dict(args.arxml_path)
-     json_file.write_json_file(args.json_path, my_arxml_file)
-     yaml_file.yaml_output(args.json_path,args.yaml_path)
-    
-if __name__ == "__main__":
-
-    main()
-
-
-
-
-
-
-
