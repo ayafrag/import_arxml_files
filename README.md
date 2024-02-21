@@ -1,8 +1,7 @@
 # import_arxml_files
 ### This is the previous code 
 
-
-
+'''
 import xmltodict
 import json
 import yaml
@@ -55,7 +54,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-    
+ '''   
     
 ### in this code there were some problems about the code to be more flexible, scalable, maintainable, and reusable code.
 ### but I apply the SOLID Principles to get it more flexible , scalable , maintainable and reusable 
