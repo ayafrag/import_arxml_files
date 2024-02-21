@@ -1,10 +1,13 @@
 # import_arxml_files
 ### This is the previous code 
 
+
+
 import xmltodict
 import json
 import yaml
 import argparse
+
 class import_configuration_tool:
     def _init_(self):
             pass
@@ -41,6 +44,8 @@ def main():
      my_tool.convert_json_to_syml(args.json_path,args.yaml_path)
 if __name__ == "__main__":
     main()
+
+    
     
 ### in this code there were some problems about the code to be more flexible, scalable, maintainable, and reusable code.
 ### but I apply the SOLID Principles to get it more flexible , scalable , maintainable and reusable 
