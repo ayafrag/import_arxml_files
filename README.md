@@ -53,7 +53,6 @@ def main():
      
 if __name__ == "__main__":
     main()
-
  '''   
     
 ### in this code there were some problems about the code to be more flexible, scalable, maintainable, and reusable code.
