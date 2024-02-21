@@ -66,11 +66,14 @@ if __name__ == "__main__":
 ### I made every class have a single repposabilty 
 ### 2- Open_Closed Principle : Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 ### made my code open to be extended and closed for modification by writing every Method doing different reposability alone using 
+
 from abc import ABC, abstractmethod
+
 class class_name(ABC):
     @abstractmethod
     def function_name(self,given_args):
         pass
+        
 ### 3- Liskov Substitution Principle (LSP):
 ### • According to this principle, The objects of a superclass should be replaceable with objects of its subclasses which should not break the original program.
 ### • Derived classes should be able to be used in place of their base classes without causing any unexpected behavior or violating the expected contracts.
@@ -81,6 +84,7 @@ class class_name(ABC):
 ### • Abstractions should not depend on details; details should depend on abstractions.
 ### • Encourages the use of dependency injection and inversion of control to reduce direct dependencies between modules and promote modular and testable code.
 ### finaly we got this 
+
 
 import xmltodict
 import json
@@ -93,10 +97,12 @@ class json_write(ABC):
     @abstractmethod
     def write_json_file(self,json_path,data):
         pass
+        
 class json_read(ABC):
     @abstractmethod
     def read_json_file(self,json_data):
         pass
+        
 class yaml_write(ABC):
     @abstractmethod
     def write_yaml_file(self,yaml_path,data):
@@ -119,6 +125,7 @@ class get_yaml(json_read,yaml_write):
         with open (json_data ,'r') as json_f:
                 file_data=json.load(json_f)
         return file_data
+        
     def write_yaml_file(self ,yaml_path,data):
         with open(yaml_path,'w') as yf:
             yaml.dump(data, yf,default_flow_style=False)
