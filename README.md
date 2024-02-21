@@ -38,6 +38,7 @@ class import_configuration_tool:
             file_data=self.__json_read(json_data)
             self.__yaml_write(yaml_path,file_data)
             
+            
 def main():
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
@@ -48,6 +49,7 @@ def main():
      my_dict = my_tool.extract_arxml_data_to_dict(args.arxml_path)
      my_tool.convert_dict_to_json(args.json_path, my_dict)
      my_tool.convert_json_to_syml(args.json_path,args.yaml_path)
+     
 if __name__ == "__main__":
     main()
 
