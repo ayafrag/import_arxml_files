@@ -1,55 +1,47 @@
 # import_arxml_files
 ### This is the previous code 
+
 import xmltodict
 import json
 import yaml
 import argparse
-
 class import_configuration_tool:
     def _init_(self):
             pass
-    
     def __json_write(self,json_path,data):
          with open(json_path,'w', encoding='utf8') as fb:
             json_data= json.dumps(data, indent=4, ensure_ascii=False)
             fb.write(json_data)
-          
     def __json_read(self,json_data):
         with open (json_data ,'r') as json_f:
                 file_data=json.load(json_f)
-        return file_data
-               
+        return file_data              
     def __yaml_write(self,yaml_path,data):
         with open(yaml_path,'w') as yf:
-            yaml.dump(data, yf,default_flow_style=False)
-                 
+            yaml.dump(data, yf,default_flow_style=False)                 
     def extract_arxml_data_to_dict(self,arxml_path):
         xml_content = open(arxml_path).read()
         my_ordered_dict=xmltodict.parse(xml_content)
         return my_ordered_dict
-
     def convert_dict_to_json(self,json_path,data):
          self.__json_write(json_path,data)
          
     def convert_json_to_syml(self,json_data,yaml_path):
             file_data=self.__json_read(json_data)
             self.__yaml_write(yaml_path,file_data)
-
 def main():
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
      parser.add_argument("json_path", type=str, help="The path to the json file")
      parser.add_argument("yaml_path", type=str, help="The path to the yaml file")
-
      args=parser.parse_args()
      my_tool = import_configuration_tool()
-
      my_dict = my_tool.extract_arxml_data_to_dict(args.arxml_path)
      my_tool.convert_dict_to_json(args.json_path, my_dict)
      my_tool.convert_json_to_syml(args.json_path,args.yaml_path)
-
 if __name__ == "__main__":
     main()
+    
 ### in this code there were some problems about the code to be more flexible, scalable, maintainable, and reusable code.
 ### but I apply the SOLID Principles to get it more flexible , scalable , maintainable and reusable 
 ### I apply 
