@@ -38,6 +38,7 @@ class import_configuration_tool:
             
             
 def main():
+
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
      parser.add_argument("json_path", type=str, help="The path to the json file")
@@ -131,6 +132,7 @@ class get_yaml(json_read,yaml_write):
           
          
 def main():
+
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
      parser.add_argument("json_path", type=str, help="The path to the json file")
