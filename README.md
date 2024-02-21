@@ -1,7 +1,6 @@
 # import_arxml_files
 ### This is the previous code 
 
-''' ruby
 import xmltodict
 import json
 import yaml
@@ -39,7 +38,6 @@ class import_configuration_tool:
             
             
 def main():
-
      parser=argparse.ArgumentParser(description="A script that imports data from arxml files and converts them to json files")
      parser.add_argument("arxml_path", type=str, help="The path to the arxml file")
      parser.add_argument("json_path", type=str, help="The path to the json file")
@@ -53,7 +51,6 @@ def main():
      
 if __name__ == "__main__":
     main()
- '''   
     
 ### in this code there were some problems about the code to be more flexible, scalable, maintainable, and reusable code.
 ### but I apply the SOLID Principles to get it more flexible , scalable , maintainable and reusable 
